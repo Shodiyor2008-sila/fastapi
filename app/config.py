@@ -12,5 +12,9 @@ class Settings(BaseSettings):
 
     class Config:
         env_file = '.env'
-        
-settings = Settings()
+
+settings = Settings(database_hostname='kavfu5f7pido12mr.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+                    database_port='3306',
+                    database_password='ldxj2fozcxpw2nzg',
+                    database_name='cdn1ak0olosxovnd',
+                    database_username='c0qo6o6vfhk0pl9x')
