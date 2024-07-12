@@ -9,7 +9,7 @@ router = APIRouter(
     prefix='/posts',
     tags=['Posts']
 )
-con = mysql.connector.connect(user='root', host='localhost', database='test', passwd = '12341234', port = 3306)
+# con = mysql.connector.connect(user='root', host='localhost', database='test', passwd = '12341234', port = 3306)
 my_posts = [{'title':'favorite device','content':'phones','id':1},{'title':'favorite sport','content':'football','id':2}]
 
 
