@@ -10,6 +10,7 @@ router = APIRouter(
     tags=['Posts']
 )
 # con = mysql.connector.connect(user='root', host='localhost', database='test', passwd = '12341234', port = 3306)
+
 my_posts = [{'title':'favorite device','content':'phones','id':1},{'title':'favorite sport','content':'football','id':2}]
 
 
@@ -22,7 +23,8 @@ my_posts = [{'title':'favorite device','content':'phones','id':1},{'title':'favo
 
 @router.get('/',response_model=List[schemas.PostResponse])
 def get_posts(db: Session = Depends(database.get_db)):
-    posts = db.query(models.Post).join(models.Users).all()
+    # posts = db.query(models.Post).join(models.Users).all()
+    posts = db.query(models.Post).all()
     return posts
     # post = db.query(models.Post).filter(models.Post.user_id == current_user.id).all() # getting a post for a specific user who is logged in
     # conn = con.cursor()
