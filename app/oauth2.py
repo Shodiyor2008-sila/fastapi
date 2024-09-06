@@ -1,7 +1,7 @@
 from jose import jwt,JWTError
 from datetime import datetime,timedelta,UTC
 from fastapi import HTTPException,status,Depends
-from . import schemas,database,models
+from . import schemas,models,database
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl='login')
